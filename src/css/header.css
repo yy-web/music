@@ -1,0 +1,21 @@
+.header{
+    height:78px;
+    display: flex;
+    align-items: center;
+}
+.header .logo{
+    font-size: 28px;
+    margin-right: 30px;
+}
+
+.header .search_box{
+    width:300px;
+    border:1px solid #eee;
+
+}
+.header .search_box input{
+    border:none;
+    margin:0;
+    width:240px;
+    padding: 0 10px;
+}

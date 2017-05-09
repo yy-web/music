@@ -1,11 +1,13 @@
 import React from 'react'
 import '../css/base.css'
+import '../css/header.css'
+
 class Header extends React.Component{
   render(){
     return(
-        <div className="header">
-            <div className="w1200">
-                <div className="icon">music</div>
+        <div className="header_bg">
+            <div className="w1200 header">
+                <span className="logo">music</span>
                 <div className="search_box">
                     <input placeholder="搜索" type="text" />
                 </div>
