@@ -15,8 +15,8 @@ article, footer, header, menu, nav, section, audio, video {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-.w1200{
-    max-width: 1200px;
+.w1000{
+    max-width: 1000px;
     margin:0 auto;
 }
 @font-face
@@ -67,4 +67,7 @@ textarea{
 	font-size:14px;
     font-family: "微软雅黑";
     outline: none;
+}
+ul li{
+  list-style: none;
 }

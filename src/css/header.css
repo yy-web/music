@@ -1,7 +1,15 @@
+.header_bg{
+  position: relative;
+}
 .header{
     height:78px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+.wrap{
+  display: flex;
+
 }
 .header .logo{
     font-size: 28px;
@@ -16,6 +24,41 @@
 .header .search_box input{
     border:none;
     margin:0;
-    width:240px;
+    width:80%;
     padding: 0 10px;
+    height:30px;
+
+}
+.header .loginForm input{
+  margin-right: 10px;
+  background:none;
+  border: none;
+  width:60px;
+  height: 30px;
+  font-size: 14px;
+  color:#fff;
+}
+.header .loginForm .login{
+  background-color: #017BC5;
+
+}
+.header .loginForm .reg{
+  color:#999;
+  border: 1px solid #999;
+
+}
+.header .more_arrow{
+  position: absolute;
+  right: 30px;
+}
+
+.header .more_tab{
+  background-color: #fff;
+  width:100px;
+  
+}
+@media screen and (max-width:768px){
+  .header .search_box{
+      width:200px;
+  }
 }
