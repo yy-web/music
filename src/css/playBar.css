@@ -1,0 +1,66 @@
+.playBar{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.showBtn{
+    display: flex;
+    justify-content: flex-end;
+}
+.icon_lock_open{
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+    width:40px;
+    height:25px;
+    background-color: #444141;
+    color:#fff;
+    margin-right: 20px;
+}
+.playBar_content_bg{
+    background-color: #444141;
+}
+.playBar_content{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    height: 60px;
+}
+
+.control span{
+    padding:0 15px;
+}
+.play{
+    display: flex;
+    align-items: center;
+}
+.songInfo{
+    display: flex;
+    flex-direction: column;
+    padding:0 15px;
+}
+.play .bar_bg{
+    width:300px;
+    height: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+    position: relative;
+}
+.play .bar{
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 10px;
+    border-radius: 8px;
+    background-color: red;
+}
+.play .times{
+    margin:0 20px;
+}
+.play .play_type{
+
+}
+.play .play_type span{
+    padding:0 10px;
+}

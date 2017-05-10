@@ -1,64 +1,106 @@
-.header_bg{
-  position: relative;
-}
-.header{
-    height:78px;
+.header_bg {}
+
+.header {
+    height: 78px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.wrap{
-  display: flex;
 
+.wrap {
+    display: flex;
 }
-.header .logo{
+
+.header .logo {
     font-size: 28px;
     margin-right: 30px;
-}
-
-.header .search_box{
-    width:300px;
-    border:1px solid #eee;
-
-}
-.header .search_box input{
-    border:none;
-    margin:0;
-    width:80%;
     padding: 0 10px;
-    height:30px;
-
-}
-.header .loginForm input{
-  margin-right: 10px;
-  background:none;
-  border: none;
-  width:60px;
-  height: 30px;
-  font-size: 14px;
-  color:#fff;
-}
-.header .loginForm .login{
-  background-color: #017BC5;
-
-}
-.header .loginForm .reg{
-  color:#999;
-  border: 1px solid #999;
-
-}
-.header .more_arrow{
-  position: absolute;
-  right: 30px;
 }
 
-.header .more_tab{
-  background-color: #fff;
-  width:100px;
-  
+.header .search_box {
+    width: 300px;
+    border: 1px solid #eee;
+    display: flex;
+    align-items: center;
 }
-@media screen and (max-width:768px){
-  .header .search_box{
-      width:200px;
-  }
+
+.header .search_box input {
+    border: none;
+    margin: 0;
+    width: 85%;
+    padding: 0 10px;
+    height: 30px;
+}
+
+.header .icon_search {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.header .icon_menu {
+    padding: 0 10px;
+}
+
+.header .loginForm {
+    position: relative;
+}
+
+.header .loginForm input {
+    margin-right: 10px;
+    background: none;
+    border: none;
+    width: 60px;
+    height: 30px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.header .loginForm .login {
+    background-color: #017BC5;
+}
+
+.header .loginForm .reg {
+    color: #999;
+    border: 1px solid #999;
+}
+
+.header .more_arrow {
+    display: none;
+}
+
+.header .more_tab {
+    position: absolute;
+    background-color: #fff;
+    width: 100px;
+    right: 30px;
+    border: 1px solid #eee;
+    text-align: center;
+    right: 9px;
+    top: 28px;
+    display: none;
+}
+
+.header .more_tab li {
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.header .more_tab li:hover {
+    background-color: #017BC5;
+    color: #fff;
+    border-bottom: none;
+}
+
+@media screen and (max-width:415px) {
+    .header .search_box {
+        width: 280px;
+        margin: 0 20px;
+    }
+    .loginForm input, .logo {
+        display: none;
+    }
+    .header .more_arrow {
+        display: block;
+    }
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from './header'
 import Nav from './nav'
+import PlayBar from './playBar'
 import Footer from './footer'
 
 class App extends React.Component{
@@ -9,6 +10,7 @@ class App extends React.Component{
         <div className="container">
             <Header/>
             <Nav/>
+            <PlayBar/>
             <Footer/>
         </div>
     )

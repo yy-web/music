@@ -1,5 +1,6 @@
 import React from 'react'
 import '../css/base.css'
+import '../css/font_codes.css'
 import '../css/header.css'
 
 class Header extends React.Component{
@@ -11,22 +12,25 @@ class Header extends React.Component{
                     <span className="logo">music</span>
                     <div className="search_box">
                         <input placeholder="搜索" type="text" />
+                        <span className="myFont icon_search"></span>
                     </div>
                 </div>
                 <div className="loginForm">
-                    <input type="button" className='reg' defaultValue="注册"/>
-                    <input type="button" className="login" defaultValue="登录"/>
-                </div>
-                <div className="more_arrow">
-                    <span>展开</span>
+                    <div>
+                        <input type="button" className='reg' defaultValue="注册"/>
+                        <input type="button" className="login" defaultValue="登录"/>
+                        <div className="more_arrow">
+                            <span className="myFont icon_menu"></span>
+                        </div>
+                    </div>
                     <div className="more_tab">
                         <ul>
                             <li><a>注册</a></li>
                             <li><a>登录</a></li>
                         </ul>
                     </div>
-
                 </div>
+
             </div>
 
         </div>

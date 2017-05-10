@@ -21,12 +21,13 @@ article, footer, header, menu, nav, section, audio, video {
 }
 @font-face
 {
-font-family: myFont;
+font-family: 'myFont';
 src: url('../font/fontello.ttf'),
      url('../font/fontello.eot'); /* IE9 */
 }
 .myFont{
     font-family: myFont;
+    cursor:pointer;
 }
 body {
     font-family: Tahoma,Helvetica,Arial,sans-serif;
