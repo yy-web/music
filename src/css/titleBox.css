@@ -1,0 +1,21 @@
+.title_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.title_box .title {
+    color: #666;
+    font-size: 28px;
+    padding-left: 10px;
+    font-weight: 500;
+}
+.title_box .more{
+    font-size: 14px;
+    padding-right: 10px;
+    color: #999;
+}

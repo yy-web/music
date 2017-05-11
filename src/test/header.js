@@ -20,7 +20,7 @@ class Header extends React.Component{
                         <input type="button" className='reg' defaultValue="注册"/>
                         <input type="button" className="login" defaultValue="登录"/>
                         <div className="more_arrow">
-                            <span className="myFont icon_menu"></span>
+                            <span className="myFont icon_th_list"></span>
                         </div>
                     </div>
                     <div className="more_tab">
