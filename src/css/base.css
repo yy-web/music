@@ -29,6 +29,11 @@ src: url('../font/fontello.ttf'),
     font-family: myFont;
     cursor:pointer;
 }
+
+.scale:hover img{
+    transition: transform 0.5s linear 0s;
+    transform: scale(1.05);
+}
 body {
     font-family: Tahoma,Helvetica,Arial,sans-serif;
     line-height:1;

@@ -18,4 +18,9 @@
     font-size: 14px;
     padding-right: 10px;
     color: #999;
+    cursor: pointer;
+}
+.title_box .more:hover{
+    color:#017BC5;
+
 }

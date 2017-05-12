@@ -5,6 +5,7 @@ import '../css/header.css'
 
 class Header extends React.Component{
   render(){
+      console.log('header')
     return(
         <div className="header_bg">
             <div className="w1000 header">

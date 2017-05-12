@@ -16,7 +16,7 @@ class PlayBarFM extends React.Component {
     }
     playBarShow() {
         const player = document.querySelector('.player_wrap');
-        const playBar = document.querySelector('.playBar');
+        const playBar = document.querySelector('.playBar_bg');
         player.classList.add('player_hide')
         player.classList.remove('player_show')
         playBar.classList.add('playBar_show')
@@ -25,7 +25,7 @@ class PlayBarFM extends React.Component {
     }
     playBarHide() {
         const player = document.querySelector('.player_wrap');
-        const playBar = document.querySelector('.playBar');
+        const playBar = document.querySelector('.playBar_bg');
         player.classList.add('player_show')
         player.classList.remove('player_hide')
         playBar.classList.add('playBar_hide')
@@ -33,6 +33,7 @@ class PlayBarFM extends React.Component {
         this.setState({btnFlag: false})
     }
     render() {
+        console.log('player')
         return (
             <div className="playerBox_wrap">
                 <div className='playerBox'>
@@ -52,40 +53,42 @@ class PlayBarFM extends React.Component {
                             <span className="myFont icon_lock_open"></span>
                         </div>
                     </div>
-                    <div className="playBar">
-                        <div className="playBar_content">
-                            <div className="control">
-                                <span className="myFont icon_to_start_2"></span>
-                                <span className="myFont icon_googleplay"></span>
-                                <span className="myFont icon_to_end_2"></span>
-                            </div>
-                            <div className="play">
-                                <div className="songInfo">
-                                    <span className="songName">asdf</span>
-                                    <span className="star">123</span>
+                    <div className="playBar_bg">
+                        <div className="playBar">
+                            <div className="playBar_content">
+                                <div className="control">
+                                    <span className="myFont icon_to_start_2"></span>
+                                    <span className="myFont icon_googleplay"></span>
+                                    <span className="myFont icon_to_end_2"></span>
                                 </div>
-                                <div className="line">
-                                    <div className="bar_bg">
-                                        <div className="bar">
-                                            <div className="dot"></div>
+                                <div className="play">
+                                    <div className="songInfo">
+                                        <span className="songName">asdf</span>
+                                        <span className="star">123</span>
+                                    </div>
+                                    <div className="line">
+                                        <div className="bar_bg">
+                                            <div className="bar">
+                                                <div className="dot"></div>
+                                            </div>
+                                        </div>
+                                        <div className="times">
+                                            <span>00:00:00</span>
+                                            <strong>/</strong>
+                                            <span>00:00:00</span>
                                         </div>
                                     </div>
-                                    <div className="times">
-                                        <span>00:00:00</span>
-                                        <strong>/</strong>
-                                        <span>00:00:00</span>
-                                    </div>
-                                </div>
 
+                                </div>
+                                <div className="play_type">
+                                    <span className="myFont icon_switch"></span>
+                                    <span className="myFont icon_resize_full"></span>
+                                    <span className="myFont icon_menu"></span>
+                                </div>
                             </div>
-                            <div className="play_type">
-                                <span className="myFont icon_switch"></span>
-                                <span className="myFont icon_resize_full"></span>
-                                <span className="myFont icon_menu"></span>
+                            <div className="hideBtn" onClick={()=>{this.playBarHide()}}>
+                                <span className="myFont icon_lock"></span>
                             </div>
-                        </div>
-                        <div className="hideBtn" onClick={()=>{this.playBarHide()}}>
-                            <span className="myFont icon_lock"></span>
                         </div>
                     </div>
                 </div>

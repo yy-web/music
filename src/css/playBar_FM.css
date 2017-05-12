@@ -39,24 +39,26 @@
 .playerBox_wrap {
     position: absolute;
     bottom: 0;
-    width: 100%;
 }
 
 .playerBox {
     display: flex;
     align-items: center;
 }
+.playBar_bg{
+    position: absolute;
+    left: -906px;
+}
 .playBar {
     display: flex;
     align-items: center;
-    transform: translateX(-906px);
 }
 .playBar_show {
-    transform: translateX(-60px);
+    left: -60px;
     transition: all 0.5s ease 0.6s;
 }
 .playBar_hide {
-    transform: translateX(-906px);
+    left: -906px;
     transition: all 0.5s ease 0.3s;
 }
 .showBtn {
