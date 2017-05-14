@@ -1,15 +1,14 @@
+.fm {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+}
 .fm .player {
     position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     float: left;
-}
-
-.fm {
-    position: absolute;
-    left: 0;
-    bottom: 0;
 }
 
 .fm .up:hover {
@@ -29,17 +28,14 @@
 .fm .player img {
     border-radius: 0 4px 4px 0;
 }
-
-.fm .player_show {
+.fm .player_show{
     transform: translateX(0px);
     transition: all 0.5s ease 0.6s;
 }
-
-.fm .player_hide {
+.fm .player_hide{
     transform: translateX(-85px);
     transition: all 0.5s ease 0.3s;
 }
-
 .fm .player_icon {
     position: absolute;
     color: #fff;
@@ -55,27 +51,22 @@
     display: flex;
     align-items: center;
 }
-
-.fm .playBar_bg {
+.fm .playBar_bg{
     position: absolute;
     left: -906px;
 }
-
 .fm .playBar {
     display: flex;
     align-items: center;
 }
-
 .fm .playBar_show {
-    left: -60px;
+    left: 0px;
     transition: all 0.5s ease 0.6s;
 }
-
 .fm .playBar_hide {
     left: -906px;
     transition: all 0.5s ease 0.3s;
 }
-
 .fm .showBtn {
     float: left;
     width: 20px;
@@ -107,7 +98,6 @@
     justify-content: center;
     color: #fff;
 }
-
 .fm .control span {
     padding: 0 15px;
 }
