@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router'
 import '../css/playBar_FM.css'
 class PlayBarFM extends React.Component {
     constructor(props) {
@@ -33,9 +34,9 @@ class PlayBarFM extends React.Component {
         this.setState({btnFlag: false})
     }
     render() {
-        console.log('player')
+        console.log(this.state.btnFlag)
         return (
-            <div className="playerBox_wrap">
+            <div className="playerBox_wrap fm">
                 <div className='playerBox'>
                     <div className="player_wrap " onMouseEnter={() => {this.handleEnter()}} onMouseLeave={() => {this.handleLeave()}}>
                         <div className="player">
@@ -82,7 +83,7 @@ class PlayBarFM extends React.Component {
                                 </div>
                                 <div className="play_type">
                                     <span className="myFont icon_switch"></span>
-                                    <span className="myFont icon_resize_full"></span>
+                                    <Link to="/playerModel"><span className="myFont icon_resize_full"></span></Link>
                                     <span className="myFont icon_menu"></span>
                                 </div>
                             </div>

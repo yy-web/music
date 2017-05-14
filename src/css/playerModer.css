@@ -6,7 +6,70 @@
     top:0;
     bottom: 0;
     right: 0;
+    color:#fff;
 }
-.player_model{
+.player_model .model_top{
+}
+.model_header{
+  display: flex;
+  margin:10px 20px;
+  flex-direction: row-reverse;
+  height: 40px;
+  align-items: center;
+}
+.model_top{
 
+}
+.model_top .tool{
+  display: flex;
+  margin-bottom: 40px;
+}
+.tool_item{
+  width: 100px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border:1px solid rgba(255,255,255,0.5);
+  color:rgba(255,255,255,0.5);
+  margin-right: 15px;
+  font-size: 14px;
+}
+.tool_item:hover{
+  border:1px solid #fff;
+  color:#fff;
+}
+.song_list_box {
+  width: 60%;
+  float: left;
+  padding-right: 10%;
+}
+.song_list_box .box_header{
+  margin-bottom: 20px;
+}
+.song_list_box li span{
+  display: inline-block;
+}
+.box_content li{
+  line-height:2;
+}
+.song_list_box .checkbox{
+  width: 5%;
+}
+.song_list_box .music{
+  width:75%;
+}
+.song_list_box .author{
+  width:10%;
+}
+.song_list_box .times{
+  width: 10%;
+}
+.lrc_box{
+    float: left;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    line-height: 1.5;
 }

@@ -4,10 +4,10 @@ class PlayBar extends React.Component {
     render() {
         return (
             <div className='playBar'>
-            <div className="showBtn">
+            {/*<div className="showBtn">
                 <span className="myFont icon_lock_open"></span>
-            </div>
-            <div className="playBar_content_bg">
+            </div>*/}
+            <div className="playBar_content_bg md">
                 <div className="playBar_content w1000">
                     <div className="control">
                         <span className="myFont icon_to_start_2"></span>
@@ -16,7 +16,7 @@ class PlayBar extends React.Component {
                     </div>
                     <div className="play">
                         <div>
-                            <img src="http://p1.music.126.net/afjQwekhKMBiLOOQz56TLA==/7836219371362214.jpg?param=34y34"/>
+                            <img src="http://p1.music.126.net/afjQwekhKMBiLOOQz56TLA==/7836219371362214.jpg?param=34y34" alt='123'/>
                         </div>
                         <div className="songInfo">
                             <span className="songName">asdf</span>

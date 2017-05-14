@@ -1,4 +1,4 @@
-.player {
+.fm .player {
     position: relative;
     display: inline-flex;
     align-items: center;
@@ -6,11 +6,17 @@
     float: left;
 }
 
-.up:hover {
+.fm {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.fm .up:hover {
     background: rgba(0, 0, 0, 0.3);
 }
 
-.up {
+.fm .up {
     background: rgba(0, 0, 0, 0.2);
     width: 100%;
     height: 100%;
@@ -20,55 +26,64 @@
     border-radius: 0 4px 4px 0;
 }
 
-.player img {
+.fm .player img {
     border-radius: 0 4px 4px 0;
 }
-.player_show{
+
+.fm .player_show {
     transform: translateX(0px);
     transition: all 0.5s ease 0.6s;
 }
-.player_hide{
+
+.fm .player_hide {
     transform: translateX(-85px);
     transition: all 0.5s ease 0.3s;
 }
-.player_icon {
+
+.fm .player_icon {
     position: absolute;
     color: #fff;
 }
 
-.playerBox_wrap {
+.fm .playerBox_wrap {
     position: absolute;
     bottom: 0;
+    left: 0;
 }
 
-.playerBox {
+.fm .playerBox {
     display: flex;
     align-items: center;
 }
-.playBar_bg{
+
+.fm .playBar_bg {
     position: absolute;
     left: -906px;
 }
-.playBar {
+
+.fm .playBar {
     display: flex;
     align-items: center;
 }
-.playBar_show {
+
+.fm .playBar_show {
     left: -60px;
     transition: all 0.5s ease 0.6s;
 }
-.playBar_hide {
+
+.fm .playBar_hide {
     left: -906px;
     transition: all 0.5s ease 0.3s;
 }
-.showBtn {
+
+.fm .showBtn {
     float: left;
     width: 20px;
     height: 60px;
     display: none;
 }
 
-.icon_lock_open {
+.fm .icon_lock_open {
     display: flex;
     font-size: 14px;
     align-items: center;
@@ -81,7 +96,7 @@
     margin-left: 1px;
 }
 
-.playBar_content {
+.fm .playBar_content {
     background: rgba(52, 52, 52, 0.7);
     clear: both;
     width: 800px;
@@ -92,33 +107,34 @@
     justify-content: center;
     color: #fff;
 }
-.control span {
+
+.fm .control span {
     padding: 0 15px;
 }
 
-.play {
+.fm .play {
     display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
 }
 
-.songInfo {
+.fm .songInfo {
     display: flex;
     margin-bottom: 10px;
 }
 
-.songInfo span {
+.fm .songInfo span {
     margin-right: 10px;
 }
 
-.line {
+.fm .line {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.play .bar_bg {
+.fm .play .bar_bg {
     width: 300px;
     height: 5px;
     border-radius: 8px;
@@ -126,7 +142,7 @@
     position: relative;
 }
 
-.play .bar {
+.fm .play .bar {
     position: absolute;
     left: 0;
     width: 30px;
@@ -135,19 +151,19 @@
     background-color: red;
 }
 
-.play .times {
+.fm .play .times {
     margin: 0 20px;
     font-size: 12px;
 }
 
-.play_type {}
+.fm .play_type {}
 
-.play_type span {
+.fm .play_type span {
     padding: 0 10px;
     font-size: 18px;
 }
 
-.hideBtn {
+.fm .hideBtn {
     height: 80px;
     display: flex;
     align-items: center;

@@ -3,7 +3,6 @@ import React from 'react'
 import '../css/nav.css'
 class Nav extends React.Component{
   render(){
-      console.log('Nav')
     return(
       <div className="nav_bg">
             <div className="w1000 nav">

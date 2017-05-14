@@ -1,7 +1,7 @@
 import React from 'react'
 
 import TitleBox from '../test/titleBox'
-
+import PlayBarFM from './playBarFM'
 import '../css/main.css'
 
 class Main extends React.Component {
@@ -122,6 +122,7 @@ class Main extends React.Component {
                         </div>
                     </div>
                 </div>
+                <PlayBarFM />
             </div>
         )
     }

@@ -1,21 +1,23 @@
 import React from 'react'
+
+import '../css/base.css'
+import '../css/font_codes.css'
 import Header from './header'
 import Nav from './nav'
 // import Main from './main'
 // import PlayBar from './playBar'
-import PlayBarFM from './playBarFM'
-import PlayerModel from './playerModel'
-import Footer from './footer'
 
+//import PlayerModel from './playerModel'
+import Footer from './footer'
+import '../css/base.css'
 class App extends React.Component {
 
     render() {
-        console.log('App')
         return (
             <div className="container">
                 <Header/>
                 <Nav/>
-                <PlayBarFM/>
+                {this.props.children}
                 <Footer/>
             </div>
         )
