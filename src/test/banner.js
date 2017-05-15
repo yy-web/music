@@ -3,7 +3,7 @@ import '../css/banner.css'
 class Banner extends React.Component {
     constructor(props) {
         super(props)
-        this.state = ({left: -100, right: 100, pos: -100})
+        this.state = ({left: -100, right: 100, pos: -100,transformFlag:true})
     }
     left() {
         this.move()
@@ -13,24 +13,30 @@ class Banner extends React.Component {
     }
     move(_direction) {
         const bannerBox = document.querySelector('.banner_box');
-        bannerBox.addEventListener("webkitTransitionEnd", function() { //动画结束时事件
-            console.log("end");
+        if(this.state.transformFlag){
+
             const direction = _direction
                 ? _direction
                 : this.state.left
             let movePos = this.state.pos + direction
+            bannerBox.style.left = movePos + '%'
 
-            this.setState({pos: movePos})
+            this.setState({pos: movePos,transformFlag : false})
             if (this.state.pos < -100) {
                 console.log('stop')
                 return
             }
             this.slide();
-        }, false);
-        bannerBox.style.left = movePos + '%'
+        }
     }
     componentDidMount() {
-        //this.slide()
+        const that = this;
+        const bannerBox = document.querySelector('.banner_box');
+        bannerBox.addEventListener("webkitTransitionEnd", function() { //动画结束时事件
+            console.log('动画结束');
+            that.setState({transformFlag : true})
+        }, false);
+        this.slide()
     }
     slide() {
         const that = this;
