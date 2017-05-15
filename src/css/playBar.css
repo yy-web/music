@@ -1,4 +1,4 @@
-.playBar{
+.playBar_md{
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -61,6 +61,9 @@
 }
 .md .play .play_type{
 
+}
+.md .play .play_type a{
+    color:#fff;
 }
 .md .play .play_type span{
     padding:0 10px;

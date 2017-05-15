@@ -1,6 +1,6 @@
 .fm {
-    position: absolute;
-    bottom: 30px;
+    position: fixed;
+    bottom: 160px;
     left: 0;
 }
 .fm .player {
@@ -146,7 +146,13 @@
     font-size: 12px;
 }
 
-.fm .play_type {}
+.fm .play_type {
+
+}
+
+.fm .play_type a{
+    color: #fff;
+}
 
 .fm .play_type span {
     padding: 0 10px;

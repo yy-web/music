@@ -1,0 +1,22 @@
+.recommend_s_list .s_list_item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px 0 15px;
+    margin-bottom: 10px;
+    height:30px;
+    box-sizing: border-box;
+    width: 100%;
+    cursor: pointer;
+
+}
+.recommend_s_list .s_list_item span{
+    margin-right: 15px;
+}
+.s_list_item:hover{
+    background:rgba(1,123,197,0.5);
+    color:#fff;
+}
+.song_icon span:hover{
+    color:#017BC5;
+}

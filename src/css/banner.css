@@ -1,0 +1,30 @@
+.banner_wrap{
+    width: 100%;
+    z-index: 99;
+    position: relative;
+    height: 500px;
+}
+.banner{
+    position: relative;
+    height: 390px;
+    overflow: hidden;
+
+}
+.banner img{
+    float: left;
+}
+.banner_box{
+    width: 300%;
+    position: absolute;
+    left:-100%;
+    transition: all 0.5s linear 0s;
+}
+
+.moveLeft{
+    transition: all 0.5s liner 0.5s;
+    transform: translateX(-33.3%);
+}
+.moveRight{
+    transition: all 0.5s liner 0.5s;
+    transform: translateX(33.3%);
+}

@@ -1,9 +1,10 @@
 import React from 'react'
 import '../css/playBar.css'
+import {Link} from 'react-router'
 class PlayBar extends React.Component {
     render() {
         return (
-            <div className='playBar'>
+            <div className='playBar_md'>
             {/*<div className="showBtn">
                 <span className="myFont icon_lock_open"></span>
             </div>*/}
@@ -34,7 +35,8 @@ class PlayBar extends React.Component {
                         </div>
                         <div className="play_type">
                             <span className="myFont icon_switch"></span>
-                            <span className="myFont icon_resize_full"></span>
+                            <Link to="/"><span className="myFont icon_resize_small"></span></Link>
+
                         </div>
                     </div>
 
