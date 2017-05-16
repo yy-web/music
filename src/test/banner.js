@@ -3,34 +3,70 @@ import '../css/banner.css'
 class Banner extends React.Component {
     constructor(props) {
         super(props)
-        this.state = ({left: -100, right: 100, pos: -100,transformFlag:true})
+        this.state = ({
+            left: -100,
+            right: 100,
+            pos: -100,
+            transformFlag:true,
+            index : 1
+        })
+
     }
     left() {
-        this.move()
+        console.log('left')
+        let index = this.state.index;
+        index++;
+        this.setState({
+            index:index
+        },function(){
+            this.move()
+        })
+
     }
     right() {
-        this.move(this.state.right)
+        console.log('right')
+        let index = this.state.index;
+        index--;
+        this.setState({
+            index:index
+        },function(){
+            this.move(this.state.right)
+        })
+
     }
     move(_direction) {
         const bannerBox = document.querySelector('.banner_box');
-        if(this.state.transformFlag){
 
+        bannerBox.classList.remove('resetBannerBox')
+        if(this.state.transformFlag){
+            const that = this;
+            this.setState({transformFlag : false})
             const direction = _direction
                 ? _direction
                 : this.state.left
+            const img = direction === this.state.left ?  this.img2 : this.img0;
+            console.log('moveindex',this.state.index);
+            let index = this.state.index
+            img.src = this.props.bannerArr[index]
             let movePos = this.state.pos + direction
             bannerBox.style.left = movePos + '%'
 
-            this.setState({pos: movePos,transformFlag : false})
-            if (this.state.pos < -100) {
-                console.log('stop')
-                return
-            }
+            const reset = setTimeout(function(){
+                this.img1.src = that.props.bannerArr[index]
+                console.log('src',index);
+                bannerBox.classList.add('resetBannerBox')
+                bannerBox.style.left = -100 + '%';
+                clearTimeout(reset)
+            },1000)
             this.slide();
         }
     }
-    componentDidMount() {
+    init(){
         const that = this;
+
+        this.img0.src = this.props.bannerArr[0];
+        this.img1.src = this.props.bannerArr[1];
+        this.img2.src = this.props.bannerArr[2];
         const bannerBox = document.querySelector('.banner_box');
         bannerBox.addEventListener("webkitTransitionEnd", function() { //动画结束时事件
             console.log('动画结束');
@@ -43,17 +79,25 @@ class Banner extends React.Component {
         const slide = setTimeout(function() {
             that.left()
             clearTimeout(slide)
-        }, 1000)
+        }, 1500)
     }
+    componentDidMount() {
+        this.img0 =  document.getElementById('img0');
+        this.img1 = document.getElementById('img1');
+        this.img2 = document.getElementById('img2');
+
+        this.init();
+    }
+
     render() {
-        console.log(`translateX(${100})`);
+        console.log('moveindexrender',this.state.index);
         return (
             <div className="banner_wrap">
                 <div className="banner  w1000">
                     <div className="banner_box">
-                        <img src="http://p3.music.126.net/s25q2x5QyqsAzilCurD-2w==/7973658325212564.jpg" alt="123" width="1000px"/>
-                        <img src="http://p4.music.126.net/V9-MXz6b2MNhEKjutoDWIg==/7937374441542745.jpg" alt="123" width="1000px"/>
-                        <img src="http://p4.music.126.net/CTU5B9R9y3XyYBZXJUXzTg==/2897213141428023.jpg" alt="123" width="1000px"/>
+                        <img id="img0" src="" alt="123" width="1000px"/>
+                        <img id="img1" src="" alt="123" width="1000px"/>
+                        <img id="img2" src="" alt="123" width="1000px"/>
                     </div>
                 </div>
                 <div className="w1000">

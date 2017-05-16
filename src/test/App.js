@@ -4,7 +4,6 @@ import '../css/base.css'
 import '../css/font_codes.css'
 import Header from './header'
 import Nav from './nav'
-import Banner from './banner'
 // import Main from './main'
 // import PlayBar from './playBar'
 
@@ -18,7 +17,6 @@ class App extends React.Component {
             <div className="container">
                 <Header/>
                 <Nav/>
-                <Banner/>
                 {this.props.children}
                 <Footer/>
             </div>

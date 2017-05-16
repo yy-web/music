@@ -4,6 +4,9 @@ import TitleBox from '../test/titleBox'
 import RecommendMusic from '../test/recommend_music_list'
 import SongItem from '../test/song_item'
 
+import Banner from '../test/banner'
+
+
 import '../css/main.css'
 
 class Main extends React.Component {
@@ -49,8 +52,14 @@ class Main extends React.Component {
                 <div key='list' style={{fontSize: '18px',margin: '20px auto'}}>请稍等...</div>
             )
         }
+        const bannerArr = [
+            'http://p3.music.126.net/s25q2x5QyqsAzilCurD-2w==/7973658325212564.jpg',
+            'http://p4.music.126.net/V9-MXz6b2MNhEKjutoDWIg==/7937374441542745.jpg',
+            'http://p4.music.126.net/CTU5B9R9y3XyYBZXJUXzTg==/2897213141428023.jpg'
+        ]
         return (
             <div className="main w1000">
+                <Banner bannerArr={bannerArr}/>
                 <TitleBox title="推荐歌单" more={true}/>
                 <div className="recommend_m_list">
                     {musicDataArr}
