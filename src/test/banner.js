@@ -10,35 +10,45 @@ class Banner extends React.Component {
             transformFlag:true,
             index : 1
         })
+        this.slideTimeId = 0
 
     }
     left() {
-        console.log('left')
-        let index = this.state.index;
-        index++;
-        this.setState({
-            index:index
-        },function(){
-            this.move()
-        })
+        if(this.state.transformFlag){
+          console.log('left')
+          let index = this.state.index;
+          index++;
+          if(index > this.props.bannerArr.length - 1){
+            index = 0
+          }
+          this.setState({
+              index:index
+          },function(){
+              this.move()
+          })
+      }
 
     }
     right() {
-        console.log('right')
-        let index = this.state.index;
-        index--;
-        this.setState({
-            index:index
-        },function(){
-            this.move(this.state.right)
-        })
+        if(this.state.transformFlag){
+          console.log('right')
+          clearTimeout(this.slideTimeId)
+          let index = this.state.index;
+          index--;
+          if(index < 0){
+            index = this.props.bannerArr.length - 1
+          }
+          this.setState({
+              index:index
+          },function(){
+              this.move(this.state.right)
+          })
+        }
 
     }
     move(_direction) {
         const bannerBox = document.querySelector('.banner_box');
-
         bannerBox.classList.remove('resetBannerBox')
-        if(this.state.transformFlag){
             const that = this;
             this.setState({transformFlag : false})
             const direction = _direction
@@ -47,6 +57,7 @@ class Banner extends React.Component {
             const img = direction === this.state.left ?  this.img2 : this.img0;
             console.log('moveindex',this.state.index);
             let index = this.state.index
+
             img.src = this.props.bannerArr[index]
             let movePos = this.state.pos + direction
             bannerBox.style.left = movePos + '%'
@@ -59,11 +70,9 @@ class Banner extends React.Component {
                 clearTimeout(reset)
             },1000)
             this.slide();
-        }
     }
     init(){
         const that = this;
-
         this.img0.src = this.props.bannerArr[0];
         this.img1.src = this.props.bannerArr[1];
         this.img2.src = this.props.bannerArr[2];
@@ -76,10 +85,9 @@ class Banner extends React.Component {
     }
     slide() {
         const that = this;
-        const slide = setTimeout(function() {
+        this.slideTimeId = setTimeout(function() {
             that.left()
-            clearTimeout(slide)
-        }, 1500)
+        }, 2000)
     }
     componentDidMount() {
         this.img0 =  document.getElementById('img0');

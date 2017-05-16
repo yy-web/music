@@ -7,8 +7,12 @@ import PlayerModel from '../test/playerModel'
 
 
 export default (
-  <Route path="/" component={App}>
+  <Route>
+    <Route path="/" component={App}>
       <IndexRoute component={Main} />
-      <Route path="/playerModel" component={PlayerModel} />
+    </Route>
+    <Route path="/playerModel" component={PlayerModel} />
   </Route>
+
+
 )
