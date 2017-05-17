@@ -81,14 +81,14 @@
     justify-content: center;
     width: 100%;
     height: 100%;
-    background: rgba(52, 52, 52, 0.7);
+    background: rgba(52, 52, 52, 0.9);
     color: #fff;
     border-radius: 4px;
     margin-left: 1px;
 }
 
 .fm .playBar_content {
-    background: rgba(52, 52, 52, 0.7);
+    background: rgba(52, 52, 52, 0.9);
     clear: both;
     width: 800px;
     border-radius: 4px;
@@ -126,19 +126,29 @@
 
 .fm .play .bar_bg {
     width: 300px;
-    height: 5px;
+    height: 2px;
     border-radius: 8px;
-    background-color: #fff;
+    background-color: rgba(232,223,223,0.5);
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .fm .play .bar {
     position: absolute;
     left: 0;
     width: 30px;
-    height: 5px;
+    height: 2px;
     border-radius: 8px;
-    background-color: red;
+    background-color: #fff;
+}
+.fm .play .dot{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
 }
 
 .fm .play .times {
@@ -164,7 +174,7 @@
     display: flex;
     align-items: center;
     width: 25px;
-    background: rgba(52, 52, 52, 0.7);
+    background: rgba(52, 52, 52, 0.9);
     justify-content: center;
     border-radius: 4px;
     margin-left: 1px;

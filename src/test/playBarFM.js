@@ -8,7 +8,6 @@ class PlayBarFM extends React.Component {
             btnFlag: false
         }
     }
-    // transform: translateX(161px);transition: all 0.5s ease 0.3s;
     handleEnter() {
         this.setState({btnFlag: true})
     }
@@ -34,7 +33,6 @@ class PlayBarFM extends React.Component {
         this.setState({btnFlag: false})
     }
     render() {
-        console.log(this.state.btnFlag)
         return (
             <div className="playerBox_wrap fm">
                 <div className='playerBox'>
@@ -70,8 +68,9 @@ class PlayBarFM extends React.Component {
                                     <div className="line">
                                         <div className="bar_bg">
                                             <div className="bar">
-                                                <div className="dot"></div>
+
                                             </div>
+                                            <div className="dot"></div>
                                         </div>
                                         <div className="times">
                                             <span>00:00:00</span>

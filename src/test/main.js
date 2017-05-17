@@ -55,7 +55,9 @@ class Main extends React.Component {
         const bannerArr = [
             'http://p3.music.126.net/s25q2x5QyqsAzilCurD-2w==/7973658325212564.jpg',
             'http://p4.music.126.net/V9-MXz6b2MNhEKjutoDWIg==/7937374441542745.jpg',
-            'http://p4.music.126.net/CTU5B9R9y3XyYBZXJUXzTg==/2897213141428023.jpg'
+            'http://p4.music.126.net/CTU5B9R9y3XyYBZXJUXzTg==/2897213141428023.jpg',
+            'http://p4.music.126.net/tGPljf-IMOCyPvumoWLOTg==/7987951976374270.jpg',
+            'http://p4.music.126.net/mp2Y2n4ueZzIj6JSnUOdtw==/7875801790676538.jpg'
         ]
         return (
             <div className="main w1000">
