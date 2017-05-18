@@ -1,5 +1,8 @@
-import React from 'react'
-import {Link} from 'react-router'
+import React from 'react';
+import {Link} from 'react-router';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import playerBarShowData from '../js/actions/playerBarShowData';
 import '../css/playBar_FM.css'
 class PlayBarFM extends React.Component {
     constructor(props) {
@@ -7,6 +10,9 @@ class PlayBarFM extends React.Component {
         this.state = {
             btnFlag: false
         }
+    }
+    componentDidMount(){
+        this.props.playerBarAction()
     }
     handleEnter() {
         this.setState({btnFlag: true})
@@ -96,4 +102,17 @@ class PlayBarFM extends React.Component {
         )
     }
 }
+
+const mapStateToProps = (state) =>{
+    return{
+        playerBarState:state.playerBarState
+    }
+}
+const mapDispatchToProps = (dispatch) =>{
+    return{
+        playerBarAction:bindActionCreators(playerBarShowData,dispatch)
+    }
+}
+
+PlayBarFM = connect(mapStateToProps,mapDispatchToProps)(PlayBarFM)
 export default PlayBarFM;

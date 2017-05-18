@@ -14,12 +14,14 @@ class Main extends React.Component {
         super(props)
         this.state = ({
             gdData: [],
-            songData:[]
+            songData:[],
+            bannerArr:[]
         })
 
     }
     componentDidMount() {
-        const that = this
+        const that = this;
+        this.bannerArr = []
         fetch('http://localhost:8888/personalized').then(function(res) {
             return res.json()
         }).then(function(Data) {
@@ -29,6 +31,13 @@ class Main extends React.Component {
             return res.json()
         }).then(function(songData) {
             that.setState({songData: songData.result})
+        })
+        fetch('http://localhost:8888/banner').then(function(res) {
+            return res.json()
+        }).then(function(picSrc) {
+            that.setState({bannerArr: picSrc.banners},function(){
+                console.log(this.state.bannerArr[0].pic);
+            })
         })
     }
     render() {
@@ -52,16 +61,11 @@ class Main extends React.Component {
                 <div key='list' style={{fontSize: '18px',margin: '20px auto'}}>请稍等...</div>
             )
         }
-        const bannerArr = [
-            'http://p3.music.126.net/s25q2x5QyqsAzilCurD-2w==/7973658325212564.jpg',
-            'http://p4.music.126.net/V9-MXz6b2MNhEKjutoDWIg==/7937374441542745.jpg',
-            'http://p4.music.126.net/CTU5B9R9y3XyYBZXJUXzTg==/2897213141428023.jpg',
-            'http://p4.music.126.net/tGPljf-IMOCyPvumoWLOTg==/7987951976374270.jpg',
-            'http://p4.music.126.net/mp2Y2n4ueZzIj6JSnUOdtw==/7875801790676538.jpg'
-        ]
+        console.log(this.state.bannerArr,22);
         return (
+
             <div className="main w1000">
-                <Banner bannerArr={bannerArr}/>
+                <Banner bannerArr={this.state.bannerArr}/>
                 <TitleBox title="推荐歌单" more={true}/>
                 <div className="recommend_m_list">
                     {musicDataArr}
