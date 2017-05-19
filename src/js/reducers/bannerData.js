@@ -1,12 +1,12 @@
 import {BANNERDATA} from '../constant/contants'
 
 const initialState = {
-    url:''
+    url:[]
 }
 
 const bannerDataReducer = (state = initialState,action) =>{
     switch(action.type){
-        case:BANNERDATA
+        case BANNERDATA :
             return Object.assign({},state,{url:action.url})
         default:return state
     }

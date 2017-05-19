@@ -1,3 +1,7 @@
 export const PLAYERBARSHOWDATA = 'PLAYERBARSHOWDATA'
 
 export const BANNERDATA = 'BANNERDATA'
+
+export const MUSICDATA = 'MUSICDATA'
+
+export const SONGDATA = 'SONGDATA'

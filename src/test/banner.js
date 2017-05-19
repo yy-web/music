@@ -42,10 +42,10 @@ class Banner extends React.Component {
             let index = this.state.index;
             if(direction === 'left'){
                 index++;
-                index = index > this.props.bannerArr.length - 1 ? 0 : index;
+                index = index > this.props.bannerArr.url.length - 1 ? 0 : index;
             }else{
                 index--;
-                index = index < 0 ? this.props.bannerArr.length - 1 : index;
+                index = index < 0 ? this.props.bannerArr.url.length - 1 : index;
             }
             let state = direction === 'left' ? this.state.left : this.state.right
             this.setState({
@@ -63,10 +63,10 @@ class Banner extends React.Component {
         const img = direction === this.state.left? this.img2: this.img0;
         bannerBox.classList.remove('resetBannerBox')
         this.setState({transformFlag: false})
-        img.src = this.props.bannerArr[this.state.index].pic
+        img.src = this.props.bannerArr.url[this.state.index].pic
         bannerBox.style.left = movePos + '%'
         const reset = setTimeout(function() {
-            this.img1.src = that.props.bannerArr[that.state.index].pic
+            this.img1.src = that.props.bannerArr.url[that.state.index].pic
             bannerBox.classList.add('resetBannerBox')
             bannerBox.style.left = -100 + '%';
             clearTimeout(reset)
@@ -74,11 +74,10 @@ class Banner extends React.Component {
         this.slide();
     }
     init() {
-        console.log(123123);
         const that = this;
-        this.img0.src = this.props.bannerArr[0].pic;
-        this.img1.src = this.props.bannerArr[1].pic;
-        this.img2.src = this.props.bannerArr[2].pic;
+        this.img0.src = this.props.bannerArr.url[0].pic;
+        this.img1.src = this.props.bannerArr.url[1].pic;
+        this.img2.src = this.props.bannerArr.url[2].pic;
         const bannerBox = document.querySelector('.banner_box');
         bannerBox.addEventListener("webkitTransitionEnd", function() { //动画结束时事件
             that.setState({transformFlag: true})
@@ -95,16 +94,12 @@ class Banner extends React.Component {
         this.img0 = document.getElementById('img0');
         this.img1 = document.getElementById('img1');
         this.img2 = document.getElementById('img2');
-        console.log(this.props.bannerArr);
-        this.bannerArrs = this.props.bannerArr
-        //this.init();
-        console.log('Component');
 
     }
+    componentDidUpdate(){
+        this.init()
+    }
     render() {
-        if(this.props.bannerArr.length === 0){
-            this.bannerArrs = [{'pic':''},{'pic':''},{'pic':''}];
-        }
         return (
             <div className="banner_wrap">
                 <div className="banner  w1000">

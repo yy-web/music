@@ -1,9 +1,9 @@
 import * as banner from '../constant/contants'
 
-const bannerData = (url)=>{
+const getBannerData = (bannerData) =>{
     return{
         type:banner.BANNERDATA,
-        url
+        url:bannerData
     }
 }
-export default bannerData;
+export default getBannerData;

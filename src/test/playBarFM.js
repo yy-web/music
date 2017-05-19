@@ -39,6 +39,7 @@ class PlayBarFM extends React.Component {
         this.setState({btnFlag: false})
     }
     render() {
+        console.log('state',this.props.mainState);
         return (
             <div className="playerBox_wrap fm">
                 <div className='playerBox'>
@@ -105,12 +106,12 @@ class PlayBarFM extends React.Component {
 
 const mapStateToProps = (state) =>{
     return{
-        playerBarState:state.playerBarState
+        playerBarState:state.playerBarState,
     }
 }
 const mapDispatchToProps = (dispatch) =>{
     return{
-        playerBarAction:bindActionCreators(playerBarShowData,dispatch)
+        playerBarAction:bindActionCreators(playerBarShowData,dispatch),
     }
 }
 
