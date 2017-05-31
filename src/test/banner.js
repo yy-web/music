@@ -75,9 +75,9 @@ class Banner extends React.Component {
     }
     init() {
         const that = this;
-        this.img0.src = this.props.bannerArr.url[0].pic;
-        this.img1.src = this.props.bannerArr.url[1].pic;
-        this.img2.src = this.props.bannerArr.url[2].pic;
+        this.img0.src = (this.props.bannerArr.url.length === 0) ? '' : this.props.bannerArr.url[0].pic;
+        this.img1.src = (this.props.bannerArr.url.length === 0) ? '' : this.props.bannerArr.url[1].pic;
+        this.img2.src = (this.props.bannerArr.url.length === 0) ? '' : this.props.bannerArr.url[2].pic;
         const bannerBox = document.querySelector('.banner_box');
         bannerBox.addEventListener("webkitTransitionEnd", function() { //动画结束时事件
             that.setState({transformFlag: true})
@@ -94,9 +94,7 @@ class Banner extends React.Component {
         this.img0 = document.getElementById('img0');
         this.img1 = document.getElementById('img1');
         this.img2 = document.getElementById('img2');
-
-    }
-    componentDidUpdate(){
+        console.log(this.props.bannerArr.url.length,'123');
         this.init()
     }
     render() {
